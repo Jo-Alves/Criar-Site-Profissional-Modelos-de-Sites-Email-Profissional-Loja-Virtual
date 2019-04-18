@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto';
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.header{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+}
+
+.header .btn-menu{
+    display: none;
+}
+
+.header-image-logo{
+    /* width: 35%; */
+}
+
+.nav-menu{  
+    padding: 30px;
+    
+}
+
+.div-menu{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .menu{
+    margin: 0;
+    padding: 0;
+}
+
+.header .menu-li{
+    list-style: none; 
+    display: inline-block;
+    margin: 0 15px 5px 0;    
+}
+
+.header .menu-li:last-child{
+    margin-right: -5%;
+}
+
+.header .menu-li a{
+    text-decoration: none;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.header .menu-li a:hover{
+    color: rgb(58, 56, 56);
+}
+
+.header .menu-li:first-child a{
+    color: rgb(58, 56, 56);
+}
+.header .menu-li:first-child a:hover{
+    color: #999;
+}
+
+.menu{
+    font-size: 13px;
+}
+
+.menu-servicos{
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.menu-li-servicos .menu-servicos{
+    position: absolute;
+    top: 10%;
+    transform:translateX(-70%);
+    -webkit-transform:translateX(-70%);
+    -moz-transform:translateX(-70%);
+    -ms-transform:translateX(-70%);
+    -o-transform:translateX(-70%);
+    display: none;    
+    padding: 20px 10px;
+    width: 200px;
+    
+}
+
+.menu-servicos li{
+    display: block; 
+    cursor: pointer;
+    background-color: black;  
+}
+.menu-servicos li a{
+    padding-left: 20px;
+}
+.menu-servicos li:hover{
+    background-color: rgb(219, 210, 210);
+}
+
+.menu-li-servicos .menu-servico{
+    transition:  2s ease-in-out;
+    -webkit-transition:  2s ease-in-out;
+    -moz-transition:  2s ease-in-out;
+    -ms-transition:  2s ease-in-out;
+    -o-transition:  2s ease-in-out;
+}
+
+.menu-li-servicos:hover .menu-servicos{
+    display: block;
+}
+
+.menu-servicos li{
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    padding: 5px 0;
+}
+
+.banner{
+    padding: 80px 10px;
+    /* background: url(../image/lenovo-thinkpad.png) no-repeat;
+    background-position:  right center;
+    background-size: 300px */
+}
+
+.banner .banner-title{
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.banner .banner-title strong{
+    color: rgb(38, 108, 189);
+}
+
+.btn{
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    -o-transition: 1s ease;
+}
+
+.btn-experimentar{
+    background-color: rgb(11, 82, 139);
+    
+}
+
+.btn-experimentar:hover{
+    background-color: rgb(113, 159, 219);
+}
+
+.btn-conhecer{
+    background-color: rgb(113, 159, 219);    
+    display: block;
+    width: 150px;
+}
+
+.btn-conhecer:hover{
+    background-color: black;
+    
+}
+
+.section-recursos{
+    border-top: 1.5em solid rgb(73, 131, 185);
+    border-bottom: .6em solid rgb(148, 176, 202);
+    text-align: center;
+    padding: 20px 50px;
+    background: linear-gradient(rgba(113, 113, 221, .5), rgba(113, 113, 221, .5)),  url(../image/os-8-melhores-notebooks-para.jpg) fixed;
+    color: white;
+    position: relative;
+}
+
+.section-recursos::before{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid rgb(51, 51, 128);
+  
+}
+
+.container{
+    background-color: white;
+    width: 90%;
+    margin: 30px auto;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+
+.container img{
+    width: 100%;
+}
+
+.section-articles-ofertas{
+    width: 100%;
+    padding: 10px 0 30px;
+    border-bottom: 2px solid rgb(21, 75, 119); 
+}
+
+
+.section-title{
+    text-transform: uppercase;
+    color: rgb(25, 186, 235);
+}
+
+.section-ofertas h4{
+    text-transform: uppercase;
+}
+
+.link-oferta{
+    background-color: rgb(21, 75, 119);
+    display: block;
+    padding: 5px 0;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
