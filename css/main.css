@@ -349,15 +349,13 @@ body{
     color: white
 }
 
-.footer .footer__nav-menu li{
-    list-style: none;
-    text-indent: -40px;
-    line-height: 2;
-}
 
 .footer .footer__nav-menu a{
     text-decoration: none;
     color: #999;
+    display: block;
+    line-height: 2;
+    font-size: 14px;
 }
 
 .footer  h5{
@@ -382,17 +380,12 @@ body{
     color: white;
 }
 
-.footer .div-infor a{
+.footer a{
     text-decoration: none;
-    color: rgb(48, 156, 160);
-    transition: text-decoration 2s ease-in-out;
-    -webkit-transition: text-decoration 2s ease-in-out;
-    -moz-transition: text-decoration 2s ease-in-out;
-    -ms-transition: text-decoration 2s ease-in-out;
-    -o-transition: text-decoration 2s ease-in-out;
+    color: rgb(48, 156, 160);   
 }
 
-.footer .div-infor a:hover{
+.footer a:hover{
     text-decoration: underline;
 }
 
