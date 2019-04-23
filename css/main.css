@@ -170,7 +170,12 @@ body{
     font-size: 13px;
 }
 
+<<<<<<< HEAD
 .menu-servicos{
+=======
+.menu-servicos ul{
+    position: relative;
+>>>>>>> 619ea77d189afaf602f26dbb9a00cfb5a4832759
     list-style: none;
     margin: 0;
     padding: 0;   
@@ -182,6 +187,7 @@ body{
 }
 
 .menu-li-servicos .menu-servicos{
+<<<<<<< HEAD
     position: absolute;    
     left: -250%;
     top: 20px;
@@ -205,6 +211,23 @@ body{
     -ms-transform: scaleY(1);
     -o-transform: scaleY(1);
     -webkit-transform: scaleY(1);
+=======
+    position: absolute;
+    top: 7%;
+    left: 64%;
+    transform: scaleY(0);
+    -webkit-transform:scaleY(0);
+    -moz-transform:scaleY(0);
+    -ms-transform:scaleY(0);
+    -o-transform:scaleY(0);
+    transition: .8s ease-in-out;
+    -webkit-transition: .8s ease-in-out;
+    -moz-transition: .8s ease-in-out;
+    -ms-transition: .8s ease-in-out;
+    -o-transition: .8s ease-in-out;
+    padding: 20px 10px;
+    width: 200px;
+>>>>>>> 619ea77d189afaf602f26dbb9a00cfb5a4832759
 }
 
 .menu-servicos li{
@@ -220,6 +243,17 @@ body{
     background-color: rgb(219, 210, 210);
 }
 
+<<<<<<< HEAD
+=======
+.menu-li-servicos:hover .menu-servicos{
+   -webkit-transform:scaleY(1);
+   -moz-transform:scaleY(1);
+   -ms-transform:scaleY(1);
+   -o-transform:scaleY(1);
+
+}
+
+>>>>>>> 619ea77d189afaf602f26dbb9a00cfb5a4832759
 .menu-servicos li{
     text-transform: uppercase;
     border-bottom: 1px solid white;
