@@ -17,34 +17,35 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="no-js">
-    <div class="page-principal">
         <div class="atendimento">
-            <p>Atendimento Off-line</p>
-        </div>
+                <p>Atendimento Off-line</p>
+            </div>
+    <div class="page-principal">
+        
         <header class="header">
             
             <div class="header-image-logo">
                 <a href="index.html"><img src="image/logo-1-1.png" alt="logo" class="image-logo"></a>
             </div>
             <div class="div-menu">
-                    <button class="btn-menu" style="display: none">"<i class="fas fa-bars"></i></button>
+                    <button class="btn-menu" style="display: none"><i class="fas fa-bars"></i></button>
             <nav class="nav-menu">  
-                    <span class="btn-fechar" style="display: none;"><i class="fas fa-times"></i></span> 
-                    <ul class="menu">
-                        <li class="menu-li"><a href="index.html">Início</a></li>
-                        <li class="menu-li menu-li-servicos">
-                          <a href="#">  Serviços <span style="display: none"><i class="fas fa-caret-down"></i></span></a>
-                            <ul class="menu-servicos">
-                                    <li><a href="#">Site Profissional</a></li>
-                                    <li><a href="#">Loja Virtual</a></li>
-                                    <li><a href="#">Email Profissional</a></li>
-                                    <li><a href="#">Planos</a></li>
-                            </ul>
-                        </li>
-                        <li  class="menu-li"><a href="#">Área do cliente</a></li>
-                        
-                    </ul>
-                </nav>
+                <span class="btn-fechar" style="display: none;"><i class="fas fa-times"></i></span> 
+                <ul class="menu">
+                    <li class="menu-li"><a href="index.html">Início</a></li>
+                    <li class="menu-li menu-li-servicos">
+                      <a href="#">  Serviços <span class="subMenu" style="display: none"><i class="fas fa-caret-down"></i></span></a>
+                        <ul class="menu-servicos">
+                            <li><a href="#">Site Profissional</a></li>
+                            <li><a href="#">Loja Virtual</a></li>
+                            <li><a href="#">Email Profissional</a></li>
+                            <li><a href="#">Planos</a></li>
+                        </ul>
+                    </li>
+                    <li  class="menu-li"><a href="#">Área do cliente</a></li>
+                    
+                </ul>
+            </nav>
             </div>    
         </header>
     
@@ -200,10 +201,27 @@
         </footer>
     </div>
 
-    <div class="page-menu">
-        
+    <div class="page-menu" style="width: 0">
+        <nav class="pag-nav-menu" style="width: 0">  
+            <button class="pag__btn-fechar" style="display: none"><i class="fas fa-times"></i></button> 
+            <ul class="pag__menu" style="display: none">
+                <li class="pag__menu-li"><a href="index.html">Início</a></li>
+                <li class="pag__menu-li pag__menu-li-servicos">
+                  <a href="#">  Serviços <span class="pag__subMenu"><i class="fas fa-caret-down"></i></span></a>
+                    <ul class="pag__menu-servicos" style="display: none">
+                        <li><a href="#">Site Profissional</a></li>
+                        <li><a href="#">Loja Virtual</a></li>
+                        <li><a href="#">Email Profissional</a></li>
+                        <li><a href="#">Planos</a></li>
+                    </ul>
+                </li>
+                <li  class="pag__menu-li"><a href="#">Área do cliente</a></li>
+                
+            </ul>
+        </nav>
     </div>
 
+    <script src="js/conf_menu.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
