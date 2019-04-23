@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* *{
+/*{
     box-sizing: border-box;
 } */
 
@@ -11,6 +11,81 @@ body{
     font-size: 14px;
     line-height: 1.5;
 }
+
+ /* .page-menu{
+    display: none;
+} */
+
+/* .page-conteudo, .page-menu{
+    display: inline-block;
+} */
+
+/* .js .header ul li{
+    display: block;
+
+} */
+
+/* .js .header{   
+    position: sticky;
+    top: 0;
+    z-index: 1;
+} */
+
+/* .js .header .btn-menu{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: rgb(11, 82, 139);    
+} */
+
+ /* .js .header .nav-menu{
+    background-color: black;
+    width: 70%;
+    height: 100vh;
+    position: relative;
+    right: -10px;
+}  */
+/* 
+.js .nav-menu ul{
+    margin: 50px 0;
+} */
+/* 
+.js .nav-menu .menu-li{    
+    line-height: 2
+} */
+/* 
+.js .nav-menu ul .menu-li a{ 
+    color: white;
+    
+} */
+/* 
+.js .menu-li-servicos span{
+    position: relative;
+} */
+/* .js .menu-li-servicos span{
+    position: absolute;
+    right: 0;
+} */
+
+/* .js .menu-servicos{
+    display: none;
+} */
+
+ .js .btn-fechar{
+    z-index: 1;
+    color: white;
+    text-align: right;
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+}  
 
 .atendimento{
     background-color: rgb(11, 82, 139);
@@ -34,19 +109,18 @@ body{
 
 .header{
     border-bottom: 1px solid #ccc;
-    padding: 10px;
+    padding: 5px 10px;
     box-sizing: border-box;
     width: 100%;
     display: flex;
-    background-color: white;
+    background-color: white;   
 }
 
-.header .btn-menu{
-    display: none;
-}
 
-.header-image-logo{
-    /* width: 35%; */
+.header-image-logo img{    
+    width: 168px;
+     height: 50px;
+     margin-top: 10px;
 }
 
 .nav-menu{
@@ -97,49 +171,53 @@ body{
 }
 
 .menu-servicos{
-    position: relative;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0;   
+}
 
+.menu-li-servicos{
+    position: relative;
+    display: block;
 }
 
 .menu-li-servicos .menu-servicos{
-    position: absolute;
-    top: 9%;
-    transform:translateX(-70%);
-    -webkit-transform:translateX(-70%);
-    -moz-transform:translateX(-70%);
-    -ms-transform:translateX(-70%);
-    -o-transform:translateX(-70%);
-    display: none;
+    position: absolute;    
+    left: -250%;
+    top: 20px;
+    transform:  scaleY(0) ;
+    -webkit-transform:  scaleY(0) ;
+    -moz-transform:  scaleY(0) ;
+    -ms-transform:  scaleY(0) ;
+    -o-transform:  scaleY(0) ;
+    transition: .5s linear;
+    -webkit-transition: .5s linear;
+    -moz-transition: .5s linear;
+    -ms-transition: .5s linear;
+    -o-transition: .5s linear;
     padding: 20px 10px;
     width: 200px;
-
-}
-
-.menu-servicos li{
-    display: block;
-    cursor: pointer;
-    background-color: black;
-}
-.menu-servicos li a{
-    padding-left: 20px;
-}
-.menu-servicos li:hover{
-    background-color: rgb(219, 210, 210);
-}
-
-.menu-li-servicos .menu-servicos{
-    transition: display  2s ease-in-out;
-    -webkit-transition: display  2s ease-in-out;
-    -moz-transition: display  2s ease-in-out;
-    -ms-transition: display  2s ease-in-out;
-    -o-transition: display  2s ease-in-out;
 }
 
 .menu-li-servicos:hover .menu-servicos{
+    transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+}
+
+.menu-servicos li{
+    cursor: pointer;
+    background-color: black;
+    list-style: none;;
+}
+.menu-servicos li a{
+    padding-left: 20px;
     display: block;
+}
+.menu-servicos li:hover{
+    background-color: rgb(219, 210, 210);
 }
 
 .menu-servicos li{
@@ -154,11 +232,13 @@ body{
 
 .banner{
     background-color: white;
-    padding: 80px 10px;
-    /* background: url(../image/lenovo-thinkpad.png) no-repeat;
-    background-position:  right center;
-    background-size: 300px */
+    padding: 80px 40px;
 }
+
+.banner-conteudo{
+    width: 600px;    
+}
+
 
 .banner .banner-title{
     text-transform: uppercase;
@@ -204,12 +284,19 @@ body{
 
 }
 
+.container{   
+    width: 85%;
+    margin: 30px auto;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
 .section-recursos{
     border-top: 1.5em solid rgb(73, 131, 185);
     border-bottom: .6em solid rgb(148, 176, 202);
     text-align: center;
-    padding: 20px 40px;
-    background: linear-gradient(rgba(113, 113, 221, .5), rgba(113, 113, 221, .5)) no-repeat,  url(../image/os-8-melhores-notebooks-para.jpg) fixed no-repeat;
+    padding: 40px 40px;
+    background: linear-gradient(rgba(80, 80, 182, 0.5), rgba(80, 80, 182, 0.5)) no-repeat,  url(../image/os-8-melhores-notebooks-para.jpg) fixed no-repeat;
     background-size: 100% 100%, 100% 100%;
     color: white;
     position: relative;
@@ -224,15 +311,6 @@ body{
     border-top: 2px solid rgb(51, 51, 128);
 
 }
-
-.container{
-    background-color: white;
-    width: 90%;
-    margin: 30px auto;
-    box-sizing: border-box;
-    padding: 0 10px;
-}
-
 
 .container img{
     width: 100%;
@@ -249,14 +327,17 @@ body{
 
 .section-articles-ofertas{
     width: 100%;
-    padding: 10px 0 30px;
+    padding: 10px 10px 30px;
     border-bottom: 2px solid rgb(21, 75, 119);
+    background-color: white;
+    box-sizing: border-box;
 }
 
 .link-oferta{
     background-color: rgb(21, 75, 119);
     display: block;
-    padding: 5px 0;
+    padding: 5px 30px;
+    line-height: 1;
     text-align: center;
     color: white;
     text-transform: uppercase;
@@ -397,4 +478,59 @@ body{
 .footer p:nth-child(6),
 .footer p:last-child{
     font-size: 13px;
+}
+
+@media screen and (min-width: 481px){
+ .banner{
+        background: url(../image/lenovo-thinkpad.png) no-repeat;
+        background-position:  right center;
+        background-size: 100% 100%;
+    }
+
+    .banner-title{
+        font-size: 40px;
+    }
+
+    .banner-conteudo{
+        margin-left: 5%;
+    }
+
+    .btn-experimentar, .btn-conhecer{
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 681px){
+    
+    .header-image-logo{
+        margin-left: 5%;
+    }
+
+    .section-recursos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+    }
+
+    .section-ofertas{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 55px;
+    }      
+
+    .footer{  
+        display: flex;              
+        position: relative;
+    }
+    
+    .footer div{       
+        width: 40%;
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .footer .copy{
+        position: absolute;
+        bottom: 20px;
+    }
 }
