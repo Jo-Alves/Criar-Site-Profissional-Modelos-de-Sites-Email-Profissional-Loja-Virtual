@@ -65,5 +65,6 @@ function Menu(Attribute){
         _this.pagePrinc.style.transitionProperty = 'transform';
         _this.pagePrinc.style.transitionDuration = '2s';
         _this.pagePrinc.style.transitionTimingFunction = "ease";
+        
     })
 }
