@@ -20,7 +20,19 @@ function Menu(Attribute){
                     document.querySelector(Attribute.btnFechar) : Attribute.btnFechar;
 
     this.btnSubMenu = (typeof Attribute.btnSubMenu === 'string') ?
-                        document.querySelector(Attribute === 'string') : Attribute.btnSubMenu;
+                        document.querySelector(Attribute.btnSubMenu) : Attribute.btnSubMenu;
+
+    this.pagMenuServicosUl = (typeof Attribute.pagMenuServicosUl === 'string') ?
+                        document.querySelector(Attribute.pagMenuServicosUl) : Attribute.pagMenuServicosUl;
+
+    this.pagMenuServicosLi = (typeof Attribute.pagMenuServicosLi === 'string') ?
+                        document.querySelectorAll(Attribute.pagMenuServicosLi) : Attribute.pagMenuServicosLi; 
+                        
+    this.seta = (typeof Attribute.seta === 'string') ?
+                        document.querySelector(Attribute.seta) : Attribute.seta;
+
+    this.lis = (typeof Attribute.lis === 'string') ?
+                        document.querySelectorAll(Attribute.lis) : Attribute.lis;
 
     this.maxWidth = Attribute.maxWidthScreen || false;
 
@@ -28,7 +40,7 @@ function Menu(Attribute){
 
     var _this = this;
 
-
+  
     this.btnMenu.addEventListener("click", abrirMenu);
 
     function abrirMenu(){  
@@ -55,7 +67,9 @@ function Menu(Attribute){
 
     }
 
-    this.btnFechar.addEventListener("click", function(){
+    this.btnFechar.addEventListener("click", closeMenu); 
+    
+    function closeMenu(){
         _this.nav.style.width = '0';
         _this.PageNav.style.width = "0";
         _this.btnFechar.style.display = 'none';
@@ -66,5 +80,59 @@ function Menu(Attribute){
         _this.pagePrinc.style.transitionDuration = '2s';
         _this.pagePrinc.style.transitionTimingFunction = "ease";
         
+    }
+
+    this.btnFechar.addEventListener("mousedown", function(){
+        _this.btnFechar.style.border = "1px dashed white";
     })
+
+    this.btnFechar.addEventListener("mouseover", function(){
+        _this.btnFechar.style.animation = "rotateDireita .5s ease 1";
+        _this.btnFechar.style.border = "none";
+    })
+
+    this.btnFechar.addEventListener("mouseout", function(){
+        _this.btnFechar.style.animation = "rotateEsquerda .5s ease 1"
+    })
+
+    var subMenuAcionado = false, _style;
+    this.pagMenuServicosUl.addEventListener("click", abrirSubMenu)
+    
+    function abrirSubMenu(){
+        _this.seta.classList.toggle("rotate");   
+        if(!subMenuAcionado)
+        {
+            _style = "block"
+            subMenuAcionado = true;
+        }
+        else{
+            _style = "none";
+            subMenuAcionado = false;
+
+        }
+        var x = 0;
+        while(_this.pagMenuServicosLi[x]){
+            _this.pagMenuServicosLi[x].style.display = _style;
+            x++;
+        }
+    }
+
+    this.seta.addEventListener("mouseover", function(){
+        _this.seta.classList.toggle("back");
+    })
+
+    this.seta.addEventListener("mouseout", function(){
+        _this.seta.classList.toggle("back");
+    })
+
+    window.addEventListener("resize", function(){
+        if(window.innerWidth >= _this.maxWidth){
+           closeMenu();
+        }
+    })
+
+    this.pageMenu.addEventListener("click", function(){
+        
+    })
+
 }

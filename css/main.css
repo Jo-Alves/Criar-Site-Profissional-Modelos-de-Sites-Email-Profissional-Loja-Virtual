@@ -11,12 +11,6 @@ body{
     font-size: 14px;
     line-height: 1.5;
 }
- 
-.js .page-principal{
-    
-}
-
-
 
 .js .page-conteudo, .page-menu{
     display: inline-block;
@@ -25,6 +19,7 @@ body{
 .js .page-menu li{
     list-style: none;
     display: block;
+    width: 250px;
 }
 
 .js .page-menu li a{
@@ -35,7 +30,7 @@ body{
 
 .js .page-menu .pag-nav-menu{
     transition: 1s ease ;
-} 
+}
 
 .js .page-menu .pag__menu-li:first-child a:hover{
     color: rgb(58, 56, 56);
@@ -44,6 +39,15 @@ body{
 .js .page-menu .pag__menu-li a:hover{
     color: #999;
 }
+
+.js .page-menu .pag__menu-li a:hover .back{
+    color: rgb(196, 48, 48);
+}
+
+.js .page-menu .pag__menu-li a:hover .fa-caret-down{
+    color: rgb(196, 48, 48)
+}
+
 
 .js .page-menu .pag__menu-li a:hover i{
     color: white;
@@ -57,6 +61,14 @@ body{
     line-height: 2;
 }
 
+.js .pag__menu-servicos li{
+    margin-left: -35px;
+}
+
+.js .pag__menu-li a:focus{
+    border: 1px dotted white; 
+}
+
 .js .pag-nav-menu .pag__btn-fechar{
     position: absolute;
     border: none;
@@ -64,19 +76,23 @@ body{
     top: 30px;
     right: 20px;
     color: white;
+    outline: none;
+    cursor: pointer;
 }
+
+/* .js .pag-nav-menu .pag__btn-fechar i{
+    cursor: pointer;
+} */
 
 .js .pag-nav-menu .pag__btn-fechar i{
     font-size: 30px;
 }
 
-.js .pag-nav-menu .pag__subMenu{
+.js .pag-nav-menu .fa-caret-down{
     position: absolute;
+    top: 115px;
     right: 30px;
-}
-
-.header .menu-li:first-child a:hover{
-    color: #999;
+    color: rgb(196, 48, 48);
 }
 
  .js .header ul li{
@@ -84,11 +100,11 @@ body{
 
 }
 
-.js .header{   
+.js .header{
     position: sticky;
     top: 0;
     z-index: 1;
-} 
+}
 
  .js .header .btn-menu{
     position: absolute;
@@ -101,7 +117,9 @@ body{
     background: transparent;
     border: none;
     font-size: 20px;
-    color: rgb(11, 82, 139);    
+    color: rgb(11, 82, 139);
+    outline: none;
+    cursor: pointer;
 }
 
 .js .header .nav-menu{
@@ -111,17 +129,17 @@ body{
     position: relative;
     right: -10px;
     display: none;
-}  
- 
+}
+
 .js .nav-menu ul{
     margin: 50px 0;
-} 
-.js .nav-menu .menu-li{    
+}
+.js .nav-menu .menu-li{
     line-height: 2
-}.js .nav-menu ul .menu-li a{ 
+}.js .nav-menu ul .menu-li a{
     color: white;
-    
-} 
+
+}
 .js .menu-li-servicos span{
     position: relative;
 }
@@ -132,19 +150,56 @@ body{
 
 }.js .menu-servicos{
     display: none;
-} 
-
- .js .btn-fechar{
-    z-index: 1;
-    color: white;
-    text-align: right;
-    position: absolute;
-    right: 10px;
-    font-size: 18px;
-}  
+}
 
 .js .atendimento{
     z-index: 2;
+}
+
+.js .back{
+    color: rgb(196, 48, 48);
+    background-color: rgba(255, 255, 255, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-top: -7px;
+    left:  250px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%; 
+}
+
+@keyframes rotateDireita{
+    from{
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+    }    
+}
+
+@keyframes rotateEsquerda{
+    from{
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+    }
+}
+
+.js .rotate{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
 }
 
 
@@ -174,25 +229,35 @@ body{
     box-sizing: border-box;
     width: 100%;
     display: flex;
-    background-color: white;   
+    background-color: white;
 }
 
+.header .menu-li:first-child a:hover{
+    color: #999;
+}
 
-.header-image-logo img{    
+.header-image-logo img{
     width: 168px;
      height: 50px;
      margin-top: 10px;
 }
 
-.nav-menu{
+.header .nav-menu{
     padding: 30px;
 
+}
+
+.header .nav-menu ul{
+    position: absolute;
+    right: 10px;
+    margin: 0;
 }
 
 .header .div-menu{
     width: 80%;
     display: flex;
     justify-content: flex-end;
+    position: relative;
 }
 
 .header .menu{
@@ -234,7 +299,7 @@ body{
 .menu-servicos{
     list-style: none;
     margin: 0;
-    padding: 0;   
+    padding: 0;
 }
 
 .menu-li-servicos{
@@ -243,7 +308,7 @@ body{
 }
 
 .menu-li-servicos .menu-servicos{
-    position: absolute;    
+    position: absolute;
     left: -250%;
     top: 20px;
     transform:  scaleY(0) ;
@@ -298,7 +363,7 @@ body{
 }
 
 .banner-conteudo{
-    width: 100%;    
+    width: 100%;
 }
 
 
@@ -346,7 +411,7 @@ body{
 
 }
 
-.container{   
+.container{
     width: 85%;
     margin: 30px auto;
     box-sizing: border-box;
@@ -437,7 +502,7 @@ body{
 
 .slide{
    width: 100%;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .slideshow{
@@ -525,7 +590,7 @@ body{
 
 .footer a{
     text-decoration: none;
-    color: rgb(48, 156, 160);   
+    color: rgb(48, 156, 160);
 }
 
 .footer a:hover{
@@ -563,7 +628,7 @@ body{
 }
 
 @media screen and (min-width: 681px){
-    
+
     .header-image-logo{
         margin-left: 5%;
     }
@@ -582,14 +647,14 @@ body{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 55px;
-    }      
+    }
 
-    .footer{  
-        display: flex;              
+    .footer{
+        display: flex;
         position: relative;
     }
-    
-    .footer div{       
+
+    .footer div{
         width: 40%;
         display: inline-block;
         margin-right: 20px;
@@ -599,4 +664,33 @@ body{
         position: absolute;
         bottom: 20px;
     }
+    .js .btn-menu{
+        display: none;
+    }
+
+    .js .page-menu{
+        display: none;
+    }
+
+    .js .header .nav-menu{   
+        height: 0; 
+        background-color: white;
+        display: block;
+   }
+   
+    .js .nav-menu .menu-li{
+       line-height: 2;
+       display: inline-block;
+   }
+
+   .js .nav-menu .menu-li a:hover{
+        color: rgb(54, 54, 180);
+   }
+   
+   .js .nav-menu ul .menu-li a{
+       color: #777;   
+   }
+    .js .menu-servicos{
+       display: inline-block;
+   }
 }

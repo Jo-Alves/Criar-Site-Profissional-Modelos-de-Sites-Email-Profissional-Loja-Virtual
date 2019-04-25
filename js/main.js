@@ -13,6 +13,7 @@
 
     var menu = new Menu({
         corpo: $body,
+        lis: ".pag__menu-li",
         container: ".page-menu",
         pageNav: ".pag-nav-menu",
         pagePrin: ".page-principal",
@@ -20,6 +21,9 @@
         btnMenu: ".btn-menu",
         btnFechar: ".pag__btn-fechar",
         btnSubMenu: ".pag__subMenu",
+        pagMenuServicosUl: ".pag__subMenuA",
+        pagMenuServicosLi: ".pag__menu-servicos li",
+        seta: ".fa-caret-down",
         maxWidthScreen: 681,
     })
 
